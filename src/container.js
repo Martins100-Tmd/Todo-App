@@ -5,7 +5,6 @@ import Todo from "./context";
 let Container = () => {
   let { item, delItem, addItem, done, Mark, deldone, MarkII } =
     useContext(Todo);
-  console.log(item);
   let rand = done.map((val, index) => {
     return (
       <div
@@ -19,7 +18,7 @@ let Container = () => {
             onClick={(e) => MarkII(e)}
           />
           <del className="font-pop font-semibold text-left text-base w-5/6 ml-3 ">
-            {val.a}
+            {val.text}
           </del>
         </div>
         <p className="font-pop font-semibold text-base cursor-pointer w-1/4 text-right">
@@ -72,7 +71,7 @@ let Container = () => {
     );
   });
   let valid = () => {
-    return item.length === 0 ? (
+    return item.length === 0 && done.length === 0 ? (
       <div className="bg-black px-5 py-2 rounded font-pop font-semibold text-white text-center my-3">
         No item....
       </div>
