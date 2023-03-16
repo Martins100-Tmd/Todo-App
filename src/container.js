@@ -8,22 +8,22 @@ let Container = () => {
   let rand = done.map((val, index) => {
     return (
       <div
-        className="flex flex-row items-stretch justify-between p-5 rounded shadow w-full"
+        className={"flex flex-row items-stretch justify-between p-5 rounded shadow w-full"}
         key={index}
       >
-        <div className="flex flex-row items-center w-3/4">
+        <div className={"flex flex-row items-center w-3/4"}>
           <input
             type={"checkbox"}
             title="Item done?"
             onClick={(e) => MarkII(e)}
           />
-          <del className="font-pop font-semibold text-left text-base w-5/6 ml-3 ">
+          <del className={"font-pop font-semibold text-left text-base w-5/6 ml-3"}>
             {val.text}
           </del>
         </div>
-        <p className="font-pop font-semibold text-base cursor-pointer w-1/4 text-right">
+        <p className={"font-pop font-semibold text-base cursor-pointer w-1/4 text-right"}>
           <i
-            className="fa text-base kk"
+            className={"fa text-base kk"}
             title="remove item"
             onClick={(e) =>
               deldone(
